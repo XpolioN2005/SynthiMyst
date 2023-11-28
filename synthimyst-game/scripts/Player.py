@@ -12,6 +12,8 @@ class player(pygame.sprite.Sprite):
 		self.direction = pygame.math.Vector2()
 		self.speed = 4
 
+		self.direction_state = "Down"
+
 		self.health = 100
 		self.data = load_data()
 		self.inventory = self.data["inventory"]
@@ -94,6 +96,28 @@ class player(pygame.sprite.Sprite):
 					if self.direction.y < 0: # moving up
 						self.hitbox.top = sprite.hitbox.bottom
 
+	def dir_state(self):
+		current_state= self.direction_state
+		if self.direction.magnitude() != 0:
+			state = ""
+			if self.direction.y < 0:
+				state += "Up"
+			if self.direction.y > 0:
+				state += "Down"
+			else:
+				state += ""
+
+			if self.direction.x < 0:
+				state += "Left"
+			if self.direction.x > 0:
+				state += "Right"
+			else:
+				state += ""
+			current_state = state
+		self.direction_state = current_state
+		
+		
 	def update(self):
 		self.input()
 		self.move(self.speed)
+		self.dir_state()

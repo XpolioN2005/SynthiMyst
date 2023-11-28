@@ -1,6 +1,5 @@
 import pygame 
 from data.settings import *
-from scripts.tile import Tile
 from scripts.Player import player
 from scripts.tmx_handel import usetmx
 
@@ -18,14 +17,6 @@ class Level:
 		self.create_map()
 
 	def create_map(self):
-		# for row_index,row in enumerate(WORLD_MAP):
-		# 	for col_index, col in enumerate(row):
-		# 		x = col_index * TILESIZE
-		# 		y = row_index * TILESIZE
-		# 		if col == 'x':
-		# 			Tile((x,y),[self.visible_sprites,self.obstacle_sprites])
-		# 		if col == 'p':
-		# 			self.player = player((x,y),[self.visible_sprites],self.obstacle_sprites)
 		self.player = player((1400,2000),[self.visible_sprites],self.obstacle_sprites)
 		usetmx("data/map.tmx", self.obstacle_sprites, self.visible_sprites)
 

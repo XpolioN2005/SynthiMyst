@@ -29,7 +29,7 @@ while running:
             save_data(level.player.data)
             pygame.quit()
             exit()
-    screen.fill((14, 135, 204))
+    screen.fill((14, 135, 158))
     level.run()
     debug(f"FPS: {int(clock.get_fps())}",screen)
     screen.blit((pygame.transform.scale(screen, screen.get_size())), (0,0))
