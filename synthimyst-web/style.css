@@ -14,6 +14,7 @@ body {
     background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
+    user-select: none;
 }
 
 header {
@@ -34,6 +35,10 @@ header {
     color: #fff;
     font-size: 2em;
     user-select: none;
+}
+
+.other-nav {
+    display: none;
 }
 
 .navigationbar a {
@@ -79,4 +84,35 @@ header {
 }
 #dowloadBtn:hover {
     background: rgba(19, 197, 158, 0);
+}
+
+#greet {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 30vh;
+
+}
+
+#logoimg {
+    width: 45vw;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    header {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .full-nav {
+        display: none;
+    }
+    .other-nav {
+        display: flex;
+        color: white;
+    }
 }

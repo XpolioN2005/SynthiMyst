@@ -11,14 +11,24 @@
     <header>
         <h2 class="logo">SynthiMyst</h2>
         <nav class="navigationbar">
-            <a class="on" href="#">Home<span></span></a>
-            <a href="#">DevLog<span></span></a>
-            <a href="#">Notifications<span></span></a>
-            <a id="toggleSelect">Releases<span></span></a>
-            <a href="#" id="dowloadBtn">Download<span></span></a>
+            <div class="full-nav">
+                <a class="on" href="#">Home<span></span></a>
+                <a href="#">DevLog<span></span></a>
+                <a href="#">Notifications<span></span></a>
+                <a id="toggleSelect">Releases<span></span></a>
+                <a href="#" id="dowloadBtn">Download<span></span></a>
+            </div>
+            <div class="other-nav">
+                <ion-icon name="menu" id="menu"></ion-icon>
+            </div>
         </nav>
     </header>
-    
+
+    <div class="greet" id="greet">
+        <img src="assests/logo.png" alt="logo" id="logoimg">
+    </div>
+
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
