@@ -44,7 +44,7 @@ header {
     user-select: none;
 }
 
-.other-nav {
+.other-nav, #other-navbar {
     display: none;
 }
 .navigationbar a {
@@ -134,10 +134,32 @@ header {
     .full-nav {
         display: none;
     }
-    .other-nav {
+    .other-nav{
         width: 100vw;
         display: flex;
         justify-content: space-between;
         color: white;
+    }
+
+    #other-navbar {
+        position: absolute;
+        display: block;
+        top: 0px;
+        width: 50vw;
+        height: 100vh;
+        background: whitesmoke;
+    }
+
+    #other-navbar ol {
+        list-style: none;
+        padding-top: 5vmax;
+        font-size: 2vmax
+    }
+
+    #other-navbar ol li {
+        padding-bottom: 5vmax;
+    }
+    #other-navbar ol li a {
+        color: red;
     }
 }
