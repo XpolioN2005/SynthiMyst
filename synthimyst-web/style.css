@@ -20,8 +20,14 @@ body::-webkit-scrollbar{
 }
 
 .hidden {
+    display: none;
     opacity: 0;
     z-index: -9999;
+    animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.visible {
+    display: block;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 header {
@@ -85,6 +91,8 @@ header {
 }
 
 #dowloadBtn{
+    right: 0vw;
+    position: fixed;
     background: rgb(19, 197, 158);
     border-radius: 30px;
 }
@@ -146,13 +154,18 @@ header {
         top: 0px;
         width: 60vw;
         height: 100vh;
-        background: whitesmoke;
+        background: rgba(25, 157, 161, 0.95);
     }
 
     .other-navName {
+        color: rgb(255, 255, 255, 0.95);
+        background-color: #C7480E;
+        font-size: xx-large;
+        font-weight: bolder;
         width: 100%;
         text-align: center;
-        padding: 2em 0px 1.5em 0px;
+        padding: 0.5em 0em 0.5em 0em;
+        margin: 0em 0px 0.5em 0px;
     }
 
     #other-navbar ol {
@@ -161,16 +174,47 @@ header {
     }
 
     #other-navbar ol li {
-        margin-bottom: 5vmax;
+        padding: 0.75em;
+        margin-bottom: 0.25em;
         width: 100%;
-        background-color: aquamarine;
+        transition: 0.5s;
     }
     #other-navbar ol li a {
         padding-left: 0;
-        color: red;
+        color: rgb(255, 255, 255);
     }
     ion-icon {
         transform: translateY(0.5vmin);
         padding-right: 3vmin;
+    }
+    #other-navbar ol li:hover  {
+        background-color: azure;
+    }
+    #other-navbar ol li a:hover {
+        color: #000;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out-left {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-1000px);
+        opacity: 0;
     }
 }
