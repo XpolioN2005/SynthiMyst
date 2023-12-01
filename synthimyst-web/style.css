@@ -14,7 +14,7 @@ body {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
-    background-color: rgb(0, 0, 0);
+    background-color: #000000;
     user-select: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -126,6 +126,33 @@ header {
     user-select: none;
 }
 
+.main {
+    width: 100vw;
+}
+
+.tagline {
+    color: rgb(218, 255, 203);
+    text-align: center;
+    padding: 5vmax;
+    transform: scale(2);
+}
+
+#scenario1 {
+    position: relative;
+    left: 30vw;
+    width: 40vw;
+    height: auto;
+    padding: 5vmin;
+    padding-top: 0;
+}
+
+.main p {
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
 
 /* responsive */
 @media screen and (max-width: 1080px) {
@@ -205,6 +232,19 @@ header {
         left: 57vw;
         transform: scale(1.7);
         z-index: 99999;
+    }
+    .tagline {
+        transform: scale(1);
+    }
+    
+    #scenario1 {
+        left: 22.5vw;
+        width: 55vw;
+        height: auto;
+    }
+    
+    .main p {
+        font-size: 0.8em;
     }
 }
 
