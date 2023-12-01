@@ -106,6 +106,7 @@ header {
 #background {
     width: 100vw;
     height: auto;
+    opacity: 0.25;
 }
 .greet {
     width: 100vw;
